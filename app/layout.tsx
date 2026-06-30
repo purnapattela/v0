@@ -40,14 +40,16 @@ export default function RootLayout({
         dmSans.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <QueryProvider>{children}</QueryProvider>
+          <div className="mx-auto w-full max-w-7xl px-4 border-x border-border min-h-screen">
+            <QueryProvider>{children}</QueryProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
